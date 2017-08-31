@@ -93,8 +93,8 @@
 							</execution>
 
 							<!-- It will execute command "npm install" inside "/angular" directory -->
-							<!-- <execution> <id>npm install</id> <goals> <goal>npm</goal> </goals> 
-								<configuration> <arguments>install</arguments> </configuration> </execution> -->
+							<execution> <id>npm install</id> <goals> <goal>npm</goal> </goals> 
+								<configuration> <arguments>install</arguments> </configuration> </execution>
 
 							<!-- It will execute command "npm build" inside "/angular" directory 
 								to clean and create "/dist" directory -->
