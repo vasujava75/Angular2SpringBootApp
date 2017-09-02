@@ -1,29 +1,15 @@
-<!--The content below is only a placeholder and can be replaced.
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  
+<div class="alert alert-success" role="alert" *ngIf="edited" >
+  Saved sucessfully
 </div>
-<h2>Here are some links to help you start: </h2>
-{{ categories }}
-<div>
-    <label>Category:</label> 
-    
-    
-    <label>Question:</label>
-    
-
-   
-   
-</div>.-->
-
+<div class="alert alert-danger" role="alert" *ngIf="error" >
+ {{errorMessage}}
+</div>
 <div class="container">
     <h1>Personality Test</h1>
-    <form>
+    <form #form="ngForm" (ngSubmit)="submitForm(form.value)">
       <div class="form-group">
         <label for="name">Category</label>
-        <select class="form-control" (change)="loadQuestionOnSelect($event.target.value)" id="category" required >
+        <select class="form-control" name="category" (change)="loadQuestionOnSelect($event.target.value)" id="category" required ngModel >
         <option value="0">--Select--</option>
         <option *ngFor="let categoriesData of categories" value= {{categoriesData.category}}>{{categoriesData.category}}
         </option>  </select>
@@ -31,7 +17,7 @@
  
       <div class="form-group">
         <label for="question">Question</label>
-        <select  class="form-control" id="question">
+        <select  class="form-control" id="question"  name="question" ngModel >
             <option value="0">--Select--</option>
             <option *ngFor="let questionApi of questions "
                   value= {{questionApi.question}}>{{questionApi.question}}
@@ -40,8 +26,8 @@
       </div>
       <div class="form-group">
           <label for="alterEgo">Enter you answer here</label>
-          <input type="text" class="form-control" id="alterEgo">
-        </div>
+          <input type="text" class="form-control" id="answer" name="answer" ngModel >
+          </div>
  
       <button type="submit" class="btn btn-success">Submit</button>
  

@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { BackendService } from './BackendService';
 
 import { HttpModule } from '@angular/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,6 +14,8 @@ import { HttpModule } from '@angular/http';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
     HttpModule
   ],
   providers: [BackendService],

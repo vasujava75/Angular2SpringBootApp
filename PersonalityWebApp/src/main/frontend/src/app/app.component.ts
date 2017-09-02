@@ -17,8 +17,9 @@ export class AppComponent implements OnInit {
    
    
   }
-  title = '67';
   
+   edited = false;
+   error=false;
   errorMessage: String;
   selectedCategory:String;
   selectedQuestion:String; 
@@ -43,7 +44,21 @@ export class AppComponent implements OnInit {
       error =>  this.errorMessage = <any>error);
       console.log(this.questions);
   }
-  
+   submitForm(form: any): void{
+    
+    if(form.category=='' || form.question==''  || form.answer==''){
+    	this.error=true;
+   		 this.errorMessage="All fields are mandatory"
+    }else{
+   		 console.log(form);
+   	 	 this.error=false;
+   		 this.edited=true;
+   		 this.errorMessage="";
+   		 this.backendService.addRecord(form).subscribe(
+  (data) => console.log(data));
+   		 
+    }
+  }
 
  
 }
