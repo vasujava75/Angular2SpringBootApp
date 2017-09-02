@@ -2,6 +2,7 @@ package com.affinitas.personApp.serviceImpl;
 
 import static org.junit.Assert.*;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,8 @@ public class JsonDataLoaderServiceImplTest {
 
 	@Autowired
 	JsonDataLoaderService jsonDataLoaderServic;
+	
+	@Ignore
 	@Test
 	public void testLoadDataFromFileToH2Db() {
 		JsonDataDto dto= jsonDataLoaderServic.loadDataFromFileToH2Db();
