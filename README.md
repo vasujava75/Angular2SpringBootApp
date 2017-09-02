@@ -13,6 +13,10 @@ We can run this project 2 different ways
 		-->	mvn clean install                                                                                                              
 		-->	Take war file present in target folder and rename it to PersonalityWebApp and deploy.                                                           
 3. Technoligies used.                                                                                                                      
-    Spring boot(web,jpa),h2 db,Angularjs x,Nodejs
+    Spring boot(web,jpa),h2 db,Angularjs x,Nodejs,Bootstrap.
+                                                                                                                                            
+4. Maven build profiles.                                                                                                                       --> We have 2 profile to our project                                                                                                           
+    -->1 for both backend and frontend 2 for only backend build
+    
 		
 		
