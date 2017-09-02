@@ -18,7 +18,8 @@ We can run this project 2 different ways
 4. Maven build profiles.                                                                                                                       --> We have 2 profile to our project                                                                                                           
     -->1 for both backend and frontend 2 for only backend build.
 5. Project Details.
-    --> Intially when application starts it loads the json data into h2 db. After that it play around the db for fetching the details for the form and saving the form data
+    --> Intially when application starts it loads the json data into h2 db. After that it play around the db for fetching the details for the form and saving the form data                                                                                                   
+6. Accessing h2 db from chrome or firefox once application is up and running.                                                            http://localhost:8080/PersonalityWebApp/h2
     
 		
 		
