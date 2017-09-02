@@ -5,8 +5,8 @@ We can run this project 2 different ways
 	-->	command prompt go to frontend folder and run below commands                                                                 
 	-->	npm install                                                                                                                
         -->	npm start                                                                                                                      
-	--> 	PersonalityWebAppApplication.java file run as java application.
-	Note:- In this if app is not able to display then put <base href="/">in index.html
+	--> 	PersonalityWebAppApplication.java file run as java application.                                                            
+	Note:- In this if app is not able to display then put base href="/" in index.html
 
 2. War deployement into tomcat.                                                                                                                 
      Eclipse or springsuite or command promt where pom file is present                                                                      
