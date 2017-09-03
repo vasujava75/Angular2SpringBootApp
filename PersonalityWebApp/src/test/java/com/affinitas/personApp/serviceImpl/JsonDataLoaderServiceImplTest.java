@@ -19,7 +19,6 @@ public class JsonDataLoaderServiceImplTest {
 	@Autowired
 	JsonDataLoaderService jsonDataLoaderServic;
 	
-	@Ignore
 	@Test
 	public void testLoadDataFromFileToH2Db() {
 		JsonDataDto dto= jsonDataLoaderServic.loadDataFromFileToH2Db();
