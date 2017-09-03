@@ -18,6 +18,10 @@ import com.affinitas.personApp.repository.CategoryRepository;
 import com.affinitas.personApp.repository.QuestionsRepository;
 
 @RestController
+/*
+ * Below cross origin is required when we are working client and server or different ports.
+ * 
+ */
 public class PeronalityApiController {
 
 	@Autowired
