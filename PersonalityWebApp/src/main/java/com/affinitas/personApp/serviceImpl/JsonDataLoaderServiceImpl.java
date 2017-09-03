@@ -48,10 +48,8 @@ public class JsonDataLoaderServiceImpl implements JsonDataLoaderService {
 					JsonDataDto.class);
 			if (jsonDataObject != null) {
 				List<QuestionDto> questionsDtos = jsonDataObject.getQuestions();
-				List<Questions> questionsList = new ArrayList<>();
-				List<Category> categorieList = new ArrayList<>();
-				createQuestionsDbFromJsonList(questionsDtos, questionsList);
-				createCategoriesDbFromJsonList(jsonDataObject, categorieList);
+				createQuestionsDbFromJsonList(questionsDtos);
+				createCategoriesDbFromJsonList(jsonDataObject);
 			}
 		} catch (IOException e) {
 			logger.error("File read exception");
@@ -59,7 +57,8 @@ public class JsonDataLoaderServiceImpl implements JsonDataLoaderService {
 		return jsonDataObject;
 	}
 
-	private void createQuestionsDbFromJsonList(List<QuestionDto> questionsDtos, List<Questions> questionsList) {
+	private void createQuestionsDbFromJsonList(List<QuestionDto> questionsDtos) {
+		List<Questions> questionsList = new ArrayList<>();
 		questionsDtos.forEach(questionDto -> {
 			Questions question = new Questions();
 			question.setQuestion(questionDto.getQuestion());
@@ -71,7 +70,8 @@ public class JsonDataLoaderServiceImpl implements JsonDataLoaderService {
 		questionsRepository.save(questionsList);
 	}
 
-	private void createCategoriesDbFromJsonList(JsonDataDto jsonDataObject, List<Category> categorieList) {
+	private void createCategoriesDbFromJsonList(JsonDataDto jsonDataObject) {
+		List<Category> categorieList = new ArrayList<>();
 		jsonDataObject.getCategories().forEach(categoryItem -> {
 			Category category = new Category();
 			category.setCategory(categoryItem);
