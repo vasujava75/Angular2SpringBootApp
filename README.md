@@ -20,6 +20,34 @@ We can run this project 2 different ways
 5. Project Details.
     --> Intially when application starts it loads the json data into h2 db. After that it play around the db for fetching the details for the form and saving the form data                                                                                                   
 6. Accessing h2 db from chrome or firefox once application is up and running.                                                            http://localhost:8080/PersonalityWebApp/h2
+
+================================================================Docker configuration realted=======================
+
+To start docker
+1.start docker quick start in windows mechine and type below command there.Make sure maven clean install ran already and jar is available in target floder.
+>come to this app location> docker build -f Dockerfile -t dockerapp .
+Dockerfile -----current floder docker file name
+dockerapp ----docker image willbe created with this name
+> docker run -p 8080:8080 dockerapp
+
+test app with below in browser--here ip address will change.So to know ip type this command>docker-machine ip
+192.168.99.100:8080/PersonalityWebApp/index.html
+
+====================================
+docker cmds
+
+app reference
+
+https://www.youtube.com/watch?v=Ojs9I-gnkc8
+
+
+
+
+
+
+
+
+
     
 		
 		
